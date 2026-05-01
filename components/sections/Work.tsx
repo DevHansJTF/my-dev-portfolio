@@ -13,7 +13,7 @@ export function Work() {
             <br />
             <span className="text-foreground/40">Work</span>
           </h1>
-          <p className="max-w-xl text-foreground/60 text-lg leading-relaxed text-justify">
+          <p className="max-w-xl text-foreground/60 text-lg leading-relaxed text-left sm:text-justify">
             An archive of websites and digital experiences. Focused on original design, robust React/Next.js execution,
             and pristine responsive layouts tailored for international audiences.
           </p>
@@ -27,7 +27,7 @@ export function Work() {
               href={"link" in project ? project.link : "#"}
               target={"link" in project ? "_blank" : undefined}
               rel={"link" in project ? "noopener noreferrer" : undefined}
-              className="block h-full cursor-none"
+              className="block h-full"
             >
               <div className="relative w-full overflow-hidden rounded-[32px] bg-surface mb-6 aspect-[4/5] border border-white/5 group-hover:border-white/10 transition-colors">
                 <Image
@@ -51,7 +51,7 @@ export function Work() {
                   <h2 className="font-display text-2xl md:text-3xl mb-3 tracking-tight group-hover:text-accent transition-colors">
                     {project.title}
                   </h2>
-                  <p className="text-foreground/60 text-sm mb-6 max-w-sm leading-relaxed text-justify">
+                  <p className="text-foreground/60 text-sm mb-6 max-w-sm leading-relaxed text-left sm:text-justify">
                     {project.description}
                   </p>
                   <div className="flex gap-2 flex-wrap">

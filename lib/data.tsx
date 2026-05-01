@@ -51,12 +51,13 @@ export const PROJECTS = [
   },
   {
     id: 3,
-    title: "Real Estate Showcase",
+    title: "Build-It Premium Construction",
     description: "Draft-ready property site scaled into a finalized, fully responsive production build.",
     slug: "property-showcase",
-    image: "https://picsum.photos/seed/realestate/800/800",
+    image: "build-it-construction.png",
     stack: ["Next.js", "Tailwind CSS", "Figma"],
     year: "2026",
+    link: "https://buildit-construction.vercel.app/",
   },
   {
     id: 4,

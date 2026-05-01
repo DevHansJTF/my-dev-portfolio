@@ -13,7 +13,7 @@ export function About() {
                 Sharp <br />
                 <span className="text-foreground/40">Design.</span> <br /> Clean Code.
               </h1>
-              <p className="text-lg text-foreground/70 leading-relaxed max-w-2xl text-justify">
+              <p className="text-lg text-foreground/70 leading-relaxed max-w-2xl text-left sm:text-justify">
                 I&apos;m Hans Justin Fernando, a hands-on Web Designer and Frontend Developer. I specialize in crafting
                 visually strong, user-friendly websites. Combining a pristine eye for design with deep expertise in
                 React, Next.js, and Tailwind CSS, I deliver sharp, tailor made interfaces far removed from generic
@@ -66,7 +66,7 @@ export function About() {
                 <div className="flex-grow">
                   <h3 className="font-display text-2xl mb-2">{item.title}</h3>
                   <h4 className="text-accent font-medium mb-4">{item.company}</h4>
-                  <p className="text-foreground/60 leading-relaxed text-justify">{item.description}</p>
+                  <p className="text-foreground/60 leading-relaxed text-left sm:text-justify">{item.description}</p>
                 </div>
               </div>
             </FadeIn>
