@@ -33,11 +33,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${jetbrainsMono.variable} ${spaceGrotesk.variable} dark scroll-smooth`}
+      className={`${inter.variable} ${jetbrainsMono.variable} ${spaceGrotesk.variable} dark scroll-smooth overflow-x-hidden`}
     >
       <body className="antialiased min-h-screen flex flex-col relative selection:bg-accent selection:text-background overflow-x-hidden">
         <NavBar />
-        <main className="flex-grow pt-24 pb-16 px-4 md:px-8 lg:px-16 mx-auto w-full max-w-7xl">{children}</main>
+        <main className="flex-grow pt-24 pb-16 px-4 md:px-8 lg:px-16 mx-auto w-full max-w-7xl overflow-x-hidden">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

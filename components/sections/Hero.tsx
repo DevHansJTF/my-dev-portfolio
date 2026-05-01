@@ -1,36 +1,52 @@
+"use client";
+
 import Image from "next/image";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { MoveRight } from "lucide-react";
+import { useState } from "react";
 
 export function Hero() {
+  const [isImageActive, setIsImageActive] = useState(false);
+
   return (
     <section id="home" className="relative min-h-[80vh] flex flex-col justify-center mt-20 md:mt-0">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10 w-full">
         <div className="col-span-1 md:col-span-12 flex flex-col md:flex-row justify-between relative z-20 mix-blend-difference w-full pointer-events-none">
-          <FadeIn delay={0.1} direction="left" className="self-start md:self-auto">
-            <h1 className="font-display font-medium uppercase text-[22vw] sm:text-[18vw] md:text-8xl lg:text-[10rem] xl:text-[12rem] leading-[0.75] md:leading-[0.85] tracking-tighter mix-blend-difference text-white">
+          <FadeIn delay={0.1} direction="left" className="self-start md:self-auto w-full">
+            <h1 className="font-display font-medium uppercase text-[18vw] sm:text-[15vw] md:text-8xl lg:text-[10rem] xl:text-[12rem] leading-[0.75] md:leading-[0.85] tracking-tighter mix-blend-difference text-white">
               FRONT
             </h1>
           </FadeIn>
           <div className="h-[260px] sm:h-[320px] md:hidden w-full"></div>{" "}
           {/* Spacer on mobile for the absolute image */}
-          <FadeIn delay={0.2} direction="right" className="self-end md:self-auto">
-            <h1 className="font-display font-medium uppercase text-[22vw] sm:text-[18vw] md:text-8xl lg:text-[10rem] xl:text-[12rem] leading-[0.75] md:leading-[0.85] tracking-tighter mix-blend-difference text-white">
+          <FadeIn delay={0.2} direction="right" className="self-end md:self-auto text-right w-full">
+            <h1 className="font-display font-medium uppercase text-[18vw] sm:text-[15vw] md:text-8xl lg:text-[10rem] xl:text-[12rem] leading-[0.75] md:leading-[0.85] tracking-tighter mix-blend-difference text-white">
               END
             </h1>
           </FadeIn>
         </div>
 
         {/* Central Image Placeholder - Representing the developer portrait */}
-        <div className="col-span-1 md:col-span-6 md:col-start-4 absolute top-[45%] md:top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] sm:w-[75%] md:w-[60%] h-[320px] sm:h-[400px] md:h-[500px] z-0 opacity-80 hover:opacity-100 transition-opacity duration-700 pointer-events-auto max-w-[calc(100vw-2rem)]">
+        <div
+          className="col-span-1 md:col-span-6 md:col-start-4 absolute top-[45%] md:top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] sm:w-[75%] md:w-[60%] h-[320px] sm:h-[400px] md:h-[500px] z-0 opacity-80 hover:opacity-100 transition-opacity duration-700 pointer-events-auto max-w-[calc(100vw-2rem)] cursor-pointer md:cursor-auto"
+          onClick={() => setIsImageActive(!isImageActive)}
+        >
           <div className="w-full h-full relative rounded-2xl md:rounded-[40px] overflow-hidden bg-surface group">
             {/* Decorative border */}
-            <div className="absolute inset-0 rounded-2xl md:rounded-[40px] border border-white/10 group-hover:border-accent/40 transition-colors duration-700 z-10" />
+            <div
+              className={`absolute inset-0 rounded-2xl md:rounded-[40px] border transition-colors duration-700 z-10 ${
+                isImageActive ? "border-accent/40" : "border-white/10 md:group-hover:border-accent/40"
+              }`}
+            />
             <Image
               src="/my-image.png"
               alt="Developer Portrait"
               fill
-              className="object-cover mix-blend-overlay grayscale group-hover:grayscale-0 group-hover:mix-blend-normal transition-all duration-[1000ms] ease-out scale-100 group-hover:scale-105"
+              className={`object-cover transition-all duration-[1000ms] ease-out ${
+                isImageActive
+                  ? "grayscale-0 mix-blend-normal scale-105"
+                  : "mix-blend-overlay grayscale scale-100 md:group-hover:grayscale-0 md:group-hover:mix-blend-normal md:group-hover:scale-105"
+              }`}
               referrerPolicy="no-referrer"
             />
           </div>

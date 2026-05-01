@@ -53,7 +53,7 @@ export function NavBar() {
         scrolled ? "bg-background/80 backdrop-blur-lg border-b border-white/5 shadow-sm" : "bg-transparent"
       }`}
     >
-      <nav className="flex items-center justify-center gap-1 sm:gap-2 p-1.5 rounded-full border border-white/10 bg-surface/80 backdrop-blur-md shadow-2xl transition-all duration-300 w-max mx-auto">
+      <nav className="flex items-center justify-center gap-1 sm:gap-2 p-1.5 rounded-full border border-white/10 bg-surface/80 backdrop-blur-md shadow-2xl transition-all duration-300 max-w-[95vw] sm:max-w-max mx-auto overflow-x-hidden">
         {navItems.map((item) => {
           const isActive = activeSection === item.path;
 
