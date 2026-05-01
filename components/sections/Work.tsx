@@ -8,19 +8,19 @@ export function Work() {
     <section id="work" className="scroll-mt-32">
       <header className="pt-12 md:pt-24 border-b border-white/10 pb-12 mb-16">
         <FadeIn>
-          <h1 className="font-display uppercase text-[clamp(3rem,8vw,6rem)] leading-none tracking-tighter mb-6">
+          <h1 className="font-display uppercase text-5xl sm:text-6xl md:text-7xl lg:text-[7rem] leading-none tracking-tighter mb-6">
             Selected
             <br />
             <span className="text-foreground/40">Work</span>
           </h1>
-          <p className="max-w-xl text-foreground/60 text-lg leading-relaxed text-left sm:text-justify">
+          <p className="max-w-xl text-foreground/60 text-lg leading-relaxed text-left sm:text-justify mb-12">
             An archive of websites and digital experiences. Focused on original design, robust React/Next.js execution,
             and pristine responsive layouts tailored for international audiences.
           </p>
         </FadeIn>
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16 lg:gap-y-24">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 md:gap-y-16 lg:gap-y-24">
         {PROJECTS.map((project, idx) => (
           <FadeIn key={project.id} delay={idx * 0.1} className={`group relative ${idx % 2 !== 0 ? "md:mt-24" : ""}`}>
             <a

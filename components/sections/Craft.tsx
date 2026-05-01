@@ -21,7 +21,7 @@ export function Craft() {
             </a>
           </div>
 
-          <div className="col-span-1 md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="col-span-1 md:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {CRAFT.map((item) => (
               <div
                 key={item.title}

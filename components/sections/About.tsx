@@ -9,11 +9,11 @@ export function About() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
           <div className="col-span-1 md:col-span-7 lg:col-span-8">
             <FadeIn>
-              <h1 className="font-display uppercase text-[clamp(2.5rem,7vw,5rem)] leading-none tracking-tighter mb-8">
+              <h1 className="font-display uppercase text-5xl sm:text-6xl md:text-7xl lg:text-[7rem] leading-none tracking-tighter mb-8">
                 Sharp <br />
                 <span className="text-foreground/40">Design.</span> <br /> Clean Code.
               </h1>
-              <p className="text-lg text-foreground/70 leading-relaxed max-w-2xl text-left sm:text-justify">
+              <p className="text-lg text-foreground/70 leading-relaxed max-w-2xl text-left sm:text-justify mb-8 md:mb-0">
                 I&apos;m Hans Justin Fernando, a hands-on Web Designer and Frontend Developer. I specialize in crafting
                 visually strong, user-friendly websites. Combining a pristine eye for design with deep expertise in
                 React, Next.js, and Tailwind CSS, I deliver sharp, tailor made interfaces far removed from generic
@@ -22,11 +22,11 @@ export function About() {
             </FadeIn>
           </div>
 
-          <div className="col-span-1 md:col-span-5 lg:col-span-4">
-            <FadeIn delay={0.2} direction="left">
-              <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden glass-panel rotate-2 hover:rotate-0 transition-transform duration-700 ease-out">
+          <div className="col-span-1 md:col-span-5 lg:col-span-4 mt-8 md:mt-0">
+            <FadeIn delay={0.2} direction="up">
+              <div className="relative w-full max-w-[300px] sm:max-w-[400px] mx-auto md:max-w-none aspect-[3/4] md:aspect-[3/4] rounded-2xl overflow-hidden glass-panel rotate-2 hover:rotate-0 transition-transform duration-700 ease-out">
                 <Image
-                  src="my-image.png"
+                  src="/my-image.png"
                   alt="Hans Justin Fernando"
                   fill
                   className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
