@@ -47,7 +47,7 @@ export const PROJECTS = [
     image: "apex-bus-rental.png",
     stack: ["React", "Vite", "Tailwind CSS"],
     year: "2026",
-    link: "https://hjt-bus-rental.vercel.app/",
+    link: "https://apex-bus-rental.vercel.app/",
   },
   {
     id: 3,
