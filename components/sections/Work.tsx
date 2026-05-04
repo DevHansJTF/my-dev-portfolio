@@ -6,21 +6,21 @@ import { PROJECTS } from "@/lib/data";
 export function Work() {
   return (
     <section id="work" className="scroll-mt-32">
-      <header className="pt-12 md:pt-24 border-b border-white/10 pb-12 mb-16">
+      <header className="pt-0 md:pt-24 border-b border-white/10 pb-8 md:pb-12 mb-8 md:mb-16">
         <FadeIn>
           <h1 className="font-display uppercase text-5xl sm:text-6xl md:text-7xl lg:text-[7rem] leading-none tracking-tighter mb-6">
             Selected
             <br />
             <span className="text-foreground/40">Work</span>
           </h1>
-          <p className="max-w-xl text-foreground/60 text-lg leading-relaxed text-left sm:text-justify mb-12">
+          <p className="max-w-xl text-foreground/60 text-lg leading-relaxed text-justify mb-12">
             An archive of websites and digital experiences. Focused on original design, robust React/Next.js execution,
             and pristine responsive layouts tailored for international audiences.
           </p>
         </FadeIn>
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 md:gap-y-16 lg:gap-y-24">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-8 md:gap-y-16 lg:gap-y-24">
         {PROJECTS.map((project, idx) => (
           <FadeIn key={project.id} delay={idx * 0.1} className={`group relative ${idx % 2 !== 0 ? "md:mt-24" : ""}`}>
             <a
@@ -51,7 +51,7 @@ export function Work() {
                   <h2 className="font-display text-2xl md:text-3xl mb-3 tracking-tight group-hover:text-accent transition-colors">
                     {project.title}
                   </h2>
-                  <p className="text-foreground/60 text-sm mb-6 max-w-sm leading-relaxed text-left sm:text-justify">
+                  <p className="text-foreground/60 text-sm mb-6 max-w-sm leading-relaxed text-justify">
                     {project.description}
                   </p>
                   <div className="flex gap-2 flex-wrap">

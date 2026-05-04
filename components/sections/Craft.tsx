@@ -4,12 +4,12 @@ import { CRAFT } from "@/lib/data";
 
 export function Craft() {
   return (
-    <section className="mb-24 mt-24">
+    <section className="mb-0 mt-0 md:mb-24 md:mt-24">
       <FadeIn>
-        <div className="border-t border-white/10 pt-24 grid grid-cols-1 md:grid-cols-12 gap-12">
+        <div className="border-t border-white/10 pt-8 md:pt-24 grid grid-cols-1 md:grid-cols-12 gap-12">
           <div className="col-span-1 md:col-span-5">
             <h2 className="font-display text-4xl tracking-tight mb-8">Design & Build</h2>
-            <p className="text-foreground/60 text-base leading-relaxed mb-8 text-left sm:text-justify max-w-sm">
+            <p className="text-foreground/60 text-base leading-relaxed mb-8 text-justify max-w-sm">
               Creating compelling websites requires a sharp eye for layout and the technical skills to execute. I build
               draft-ready structures efficiently, refining them into responsive, pristine interfaces.
             </p>
@@ -30,9 +30,7 @@ export function Craft() {
                 <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-accent/50 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
                 <div className="text-foreground/30 group-hover:text-accent transition-colors mb-8">{item.icon}</div>
                 <h3 className="font-display text-xl mb-3">{item.title}</h3>
-                <p className="text-sm text-foreground/50 leading-relaxed text-left sm:text-justify">
-                  {item.description}
-                </p>
+                <p className="text-sm text-foreground/50 leading-relaxed text-justify">{item.description}</p>
               </div>
             ))}
           </div>

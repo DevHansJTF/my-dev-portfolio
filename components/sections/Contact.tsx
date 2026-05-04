@@ -5,8 +5,8 @@ import { LINKS } from "@/lib/data";
 export function Contact() {
   return (
     <section id="contact" className="scroll-mt-32">
-      <div className="flex flex-col min-h-[70vh] justify-center pt-24 pb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
+      <div className="flex flex-col min-h-[70vh] justify-center pt-0 md:pt-24 pb-16 md:pb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-32 items-center">
           {/* Left Column - Heading */}
           <div>
             <FadeIn>
@@ -17,7 +17,7 @@ export function Contact() {
                 Let&apos;s <br />
                 <span className="text-foreground/40">Connect</span>
               </h1>
-              <p className="text-lg text-foreground/60 leading-relaxed max-w-md text-left sm:text-justify mb-12 lg:mb-0">
+              <p className="text-lg text-foreground/60 leading-relaxed max-w-md text-justify mb-12 lg:mb-0">
                 Whether you need high-volume web design, draft-ready site generation, or precise Next.js and Tailwind
                 execution, I&apos;m ready to integrate into your workflow and deliver sharp, brand-aware results.
               </p>

@@ -6,7 +6,9 @@ export function Footer() {
       <div className="flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="flex flex-col gap-2">
           <p className="font-display font-medium text-lg tracking-tight">DevHansJTF</p>
-          <p className="font-mono text-xs text-foreground/50 uppercase tracking-widest">Web Designer & Frontend Dev</p>
+          <p className="font-mono text-xs text-foreground/50 uppercase tracking-widest">
+            Frontend Developer & Web Designer
+          </p>
         </div>
 
         <div className="flex gap-6 text-sm">
