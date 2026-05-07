@@ -37,7 +37,7 @@ export const PROJECTS = [
     image: "/lumina-home-goods.png",
     stack: ["Next.js", "Tailwind CSS", "Framer Motion", "Lenis"],
     year: "2026",
-    link: "https://lumina-home-goods.vercel.app/",
+    link: "https://lumina-furniture-services.vercel.app/",
   },
   {
     id: 2,
