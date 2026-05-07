@@ -12,11 +12,7 @@ export function SmoothScrolling({ children }: { children: ReactNode }) {
       gestureOrientation: "vertical",
       smoothWheel: true,
       wheelMultiplier: 0.6,
-      // For mobile:
-      // Note: Enable smoothTouch only if explicitly requested, as native mobile scroll is usually better
-      // but according to the prompt "both for mobile and desktop view", we can try `syncTouch`
-      syncTouch: true,
-      touchMultiplier: 0.9,
+      syncTouch: false,
     });
 
     function raf(time: number) {
