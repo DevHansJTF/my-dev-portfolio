@@ -3,6 +3,8 @@
 import { motion } from "motion/react";
 import { useState, useEffect } from "react";
 
+import { scrollToSection } from "@/lib/utils";
+
 const navItems = [
   { path: "#home", label: "Home" },
   { path: "#work", label: "Work" },
@@ -61,22 +63,7 @@ export function NavBar() {
             <a
               key={item.path}
               href={item.path}
-              onClick={(e) => {
-                e.preventDefault();
-                const targetId = item.path.substring(1);
-                const element = document.getElementById(targetId);
-                if (element) {
-                  const yOffset = -80; // Offset for sticky navbar
-                  const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
-                  // @ts-ignore
-                  if (window.lenis) {
-                    // @ts-ignore
-                    window.lenis.scrollTo(y);
-                  } else {
-                    window.scrollTo({ top: y, behavior: "smooth" });
-                  }
-                }
-              }}
+              onClick={(e) => scrollToSection(e, item.path.substring(1))}
               className={`relative px-4 sm:px-5 md:px-6 py-3 md:py-3 rounded-full text-sm sm:text-sm md:text-base font-medium transition-all duration-300 ${
                 isActive ? "text-foreground" : "text-foreground/50 hover:text-foreground hover:bg-white/5"
               }`}
