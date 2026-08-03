@@ -18,7 +18,7 @@ export function Contact() {
                 <span className="text-foreground/40">Connect</span>
               </h1>
               <p className="text-lg text-foreground/60 leading-relaxed max-w-md text-justify mb-12 lg:mb-0">
-                Whether you need high-volume web design, draft-ready site generation, or precise Next.js and Tailwind
+                Whether you need high-volume web design, draft-ready site generation, or precise Next.js, Tailwind, and WordPress
                 execution, I&apos;m ready to integrate into your workflow and deliver sharp, brand-aware results.
               </p>
             </FadeIn>

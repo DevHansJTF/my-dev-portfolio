@@ -20,58 +20,77 @@ export function Work() {
         </FadeIn>
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-8 md:gap-y-16 lg:gap-y-24">
-        {PROJECTS.map((project, idx) => (
-          <FadeIn key={project.id} delay={idx * 0.1} className={`group relative ${idx % 2 !== 0 ? "md:mt-24" : ""}`}>
-            <a
-              href={"link" in project ? project.link : "#"}
-              target={"link" in project ? "_blank" : undefined}
-              rel={"link" in project ? "noopener noreferrer" : undefined}
-              className="block h-full"
-            >
-              <div className="relative w-full overflow-hidden rounded-[32px] bg-surface mb-6 aspect-[4/5] border border-white/5 group-hover:border-white/10 transition-colors">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover object-top scale-100 group-hover:scale-105 transition-transform duration-1000 ease-out grayscale group-hover:grayscale-0"
-                  referrerPolicy="no-referrer"
-                  unoptimized
-                />
-                <div className="absolute inset-0 bg-background/20 group-hover:bg-transparent transition-colors duration-500" />
-
-                {/* Year Badge */}
-                <div className="absolute top-6 right-6 font-mono text-[10px] bg-background/80 backdrop-blur border border-white/10 px-3 py-1 rounded-full uppercase tracking-widest text-foreground/70">
-                  {project.year}
-                </div>
-              </div>
-
-              <div className="flex items-start justify-between">
-                <div>
-                  <h2 className="font-display text-2xl md:text-3xl mb-3 tracking-tight group-hover:text-accent transition-colors">
-                    {project.title}
+      <div className="flex flex-col gap-y-24 md:gap-y-32">
+        {PROJECTS.map((project, idx) => {
+          return (
+            <FadeIn key={project.id} delay={0.1} className="group relative">
+              <div className="flex flex-col md:flex-row-reverse gap-8 md:gap-12 lg:gap-16 items-center">
+                
+                {/* Text Content */}
+                <div className="w-full md:w-1/2 flex flex-col justify-center">
+                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl mb-4 tracking-tight group-hover:text-accent transition-colors">
+                    <a
+                      href={"link" in project ? project.link : "#"}
+                      target={"link" in project ? "_blank" : undefined}
+                      rel={"link" in project ? "noopener noreferrer" : undefined}
+                    >
+                      {project.title}
+                    </a>
                   </h2>
-                  <p className="text-foreground/60 text-sm mb-6 max-w-sm leading-relaxed text-justify">
+                  <p className="text-foreground/60 text-base md:text-lg mb-6 leading-relaxed text-justify">
                     {project.description}
                   </p>
-                  <div className="flex gap-2 flex-wrap">
+                  
+                  <div className="flex gap-2 flex-wrap mb-8">
                     {project.stack.map((tech) => (
                       <span
                         key={tech}
-                        className="font-mono text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-md border border-white/10 text-foreground/50 bg-white/5"
+                        className="font-mono text-[10px] uppercase tracking-wider px-3 py-1.5 rounded-md border border-white/10 text-foreground/50 bg-white/5"
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
+
+                  <a
+                    href={"link" in project ? project.link : "#"}
+                    target={"link" in project ? "_blank" : undefined}
+                    rel={"link" in project ? "noopener noreferrer" : undefined}
+                    className="inline-flex items-center gap-2 text-sm font-mono uppercase tracking-widest text-foreground hover:text-accent transition-colors w-fit"
+                  >
+                    View Project <ArrowUpRight size={16} />
+                  </a>
                 </div>
-                <div className="bg-white/5 p-4 rounded-full opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 border border-white/10 text-accent hidden sm:block">
-                  <ArrowUpRight size={20} />
+
+                {/* Image Content */}
+                <div className="w-full md:w-1/2 relative">
+                  <a
+                    href={"link" in project ? project.link : "#"}
+                    target={"link" in project ? "_blank" : undefined}
+                    rel={"link" in project ? "noopener noreferrer" : undefined}
+                    className="block relative w-full overflow-hidden rounded-[24px] bg-surface aspect-[4/3] md:aspect-video border border-white/5 group-hover:border-white/10 transition-colors"
+                  >
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover object-top scale-100 group-hover:scale-105 transition-transform duration-1000 ease-out grayscale group-hover:grayscale-0"
+                      referrerPolicy="no-referrer"
+                      unoptimized
+                    />
+                    <div className="absolute inset-0 bg-background/20 group-hover:bg-transparent transition-colors duration-500" />
+
+                    {/* Year Badge */}
+                    <div className="absolute top-4 right-4 md:top-6 md:right-6 font-mono text-[10px] bg-background/80 backdrop-blur border border-white/10 px-3 py-1 rounded-full uppercase tracking-widest text-foreground/70">
+                      {project.year}
+                    </div>
+                  </a>
                 </div>
+
               </div>
-            </a>
-          </FadeIn>
-        ))}
+            </FadeIn>
+          );
+        })}
       </div>
     </section>
   );

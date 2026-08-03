@@ -21,8 +21,8 @@ export function About() {
               <p className="text-lg text-foreground/70 leading-relaxed max-w-2xl text-justify mb-8 md:mb-0">
                 I&apos;m Hans Justin Fernando, a hands-on Frontend Developer and Web Designer. I specialize in crafting
                 visually strong, user-friendly websites. Combining a pristine eye for design with deep expertise in
-                React, Next.js, and Tailwind CSS, I deliver sharp, tailor made interfaces far removed from generic
-                templates
+                React, Next.js, Tailwind CSS, and custom WordPress solutions, I deliver sharp, tailor made interfaces far removed from generic
+                templates.
               </p>
             </FadeIn>
           </div>

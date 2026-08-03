@@ -54,11 +54,11 @@ export function Hero() {
         <div className="col-span-1 md:col-span-12 flex flex-col md:flex-row justify-between items-start md:items-end mt-12 md:mt-32 z-10 w-full pointer-events-none">
           <FadeIn delay={0.4} direction="up" className="max-w-md pointer-events-auto">
             <p className="font-mono text-xs uppercase tracking-widest text-accent mb-6 flex items-center gap-3">
-              <span className="w-8 h-px bg-accent"></span> Web Design / React / Tailwind
+              <span className="w-8 h-px bg-accent"></span> Web Design / React / WordPress
             </p>
             <p className="font-display text-white text-lg md:text-xl leading-relaxed text-justify">
               I am a Frontend Developer and Web Designer focused on crafting sharp, brand-aware websites using modern
-              workflows. I specialize in Next.js, React, and Tailwind CSS to deliver premium, highly responsive
+              workflows. I specialize in Next.js, React, Tailwind CSS, and custom WordPress solutions to deliver premium, highly responsive
               experiences rapidly.
             </p>
           </FadeIn>
