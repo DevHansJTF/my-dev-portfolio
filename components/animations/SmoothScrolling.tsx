@@ -15,6 +15,9 @@ export function SmoothScrolling({ children }: { children: ReactNode }) {
       syncTouch: false,
     });
 
+    // @ts-ignore
+    window.lenis = lenis;
+
     function raf(time: number) {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -24,6 +27,8 @@ export function SmoothScrolling({ children }: { children: ReactNode }) {
 
     return () => {
       lenis.destroy();
+      // @ts-ignore
+      delete window.lenis;
     };
   }, []);
 

@@ -1,7 +1,9 @@
+"use client";
+
 import { FadeIn } from "@/components/animations/FadeIn";
 import { MoveRight } from "lucide-react";
 import { CRAFT } from "@/lib/data";
-
+import { scrollToSection } from "@/lib/utils";
 export function Craft() {
   return (
     <section className="mb-0 mt-0 md:mb-24 md:mt-24">
@@ -15,6 +17,7 @@ export function Craft() {
             </p>
             <a
               href="#about"
+              onClick={(e) => scrollToSection(e, "about")}
               className="font-mono text-xs uppercase tracking-widest text-accent hover:text-white transition-colors flex items-center gap-2 w-fit"
             >
               Read Philosophy <MoveRight size={14} />
