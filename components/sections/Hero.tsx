@@ -4,6 +4,7 @@ import Image from "next/image";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { MoveRight } from "lucide-react";
 import { useState } from "react";
+import { scrollToSection } from "@/lib/utils";
 
 export function Hero() {
   const [isImageActive, setIsImageActive] = useState(false);
@@ -66,6 +67,7 @@ export function Hero() {
           <FadeIn delay={0.5} direction="up" className="mt-8 md:mt-0 pointer-events-auto">
             <a
               href="#work"
+              onClick={(e) => scrollToSection(e, "work")}
               className="group flex items-center gap-4 border border-white/10 rounded-full px-6 py-4 hover:bg-white/5 transition-colors uppercase font-mono text-xs tracking-wider"
             >
               View Selected Work
