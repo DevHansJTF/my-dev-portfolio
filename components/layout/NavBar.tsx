@@ -68,7 +68,13 @@ export function NavBar() {
                 if (element) {
                   const yOffset = -80; // Offset for sticky navbar
                   const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
-                  window.scrollTo({ top: y, behavior: "smooth" });
+                  // @ts-ignore
+                  if (window.lenis) {
+                    // @ts-ignore
+                    window.lenis.scrollTo(y);
+                  } else {
+                    window.scrollTo({ top: y, behavior: "smooth" });
+                  }
                 }
               }}
               className={`relative px-4 sm:px-5 md:px-6 py-3 md:py-3 rounded-full text-sm sm:text-sm md:text-base font-medium transition-all duration-300 ${
