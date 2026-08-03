@@ -62,6 +62,47 @@ export const PROJECTS = [
   },
   {
     id: 4,
+    title: "Magnified Memories",
+    description:
+      "A robust photobooth desktop application featuring customizable themes, smooth animations, and a highly responsive interface built with Electron and Next.js.",
+    slug: "magnified-memories",
+    image: "/magnified-memories.png",
+    stack: ["Electron", "Next.js", "Tailwind CSS", "Zustand", "Framer Motion"],
+    year: "2026",
+    link: "https://devhansjtf-dslr-photobooth.vercel.app/",
+  },
+  {
+    id: 5,
+    title: "Sevetech",
+    description: "A modern, highly responsive digital platform and web presence for Sevetech.",
+    slug: "sevetech",
+    image: "/sevetech.png",
+    stack: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
+    year: "2026",
+    link: "https://sevetech.dev/",
+  },
+  {
+    id: 6,
+    title: "Roast & Brew",
+    description: "A premium coffee shop website featuring an elegant, inviting design tailored for coffee enthusiasts.",
+    slug: "roast-and-brew",
+    image: "/roast-and-brew.png",
+    stack: ["WordPress", "WooCommerce", "Elementor", "Simply Static"],
+    year: "2026",
+    link: "https://wordpress-roast-and-brew.vercel.app/",
+  },
+  {
+    id: 7,
+    title: "Aura Acoustics",
+    description: "A sophisticated platform for high-end audio equipment and acoustic solutions.",
+    slug: "aura-acoustics",
+    image: "/aura-acoustics.png",
+    stack: ["WordPress", "Elementor", "Simply Static"],
+    year: "2026",
+    link: "https://aura-acoustics-wp.vercel.app/",
+  },
+  {
+    id: 8,
     title: "Snapfolia Leaf Identification",
     description:
       "An intuitive, nature-inspired platform designed to assist in leaf identification and environmental research",
@@ -74,6 +115,13 @@ export const PROJECTS = [
 ];
 
 export const TIMELINE = [
+  {
+    year: "2026",
+    title: "Freelance Software Developer",
+    company: "Magnified Memories",
+    description:
+      "Engineered a robust desktop photobooth application using Electron and Next.js. Implemented customizable themes, state management with Zustand, and smooth animations for a highly responsive user experience.",
+  },
   {
     year: "2025",
     title: "Bachelor of Science in Computer Science",
